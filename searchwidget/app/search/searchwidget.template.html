@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Itunes Search </h2>
+    <input type="text" ng-model="$ctrl.searchQuery"
+               ng-keypress="$ctrl.getSearchResults($ctrl.searchQuery)"
+                placeholder="Search here for  apps, iBooks, movies, podcasts, music, music videos, audiobooks, and TV shows"
+                class = "search" >
+</div>
+<div class="flex_container">
+    <div ng-if="$ctrl.searchResult.length > 0">
+        <div class="item_heading">
+            <div></div>
+            <div class="collection_name"> Collection Name </div>
+            <div class="description"> Description </div>
+            <div> Country </div>
+            <div>Currency </div>
+            <div><a ng-href="{{ result.previewUrl }}" > Preview </a></div>
+        </div>
+
+        <div ng-repeat="result in $ctrl.searchResult" class="results">
+            <div><img ng-src="{{ result.artworkUrl100 }}"></div>
+            <div class="collection_name"> {{ result.collectionName }} </div>
+            <div class="description"> {{ result.longDescription }} </div>
+            <div> {{ result.country }} </div>
+            <div> {{ result.currency }} </div>
+           <div> <a ng-href="{{result.previewUrl}}"> Preview </a> </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,86 @@
+body{
+    margin:0;
+    padding:0;
+    background: #FFFFFF;
+    font-family: Tahoma;
+    font-weight: 300;
+    font-size: 13px;
+    color:#000000;
+
+}
+.container{
+    width:70%;
+    margin:1% auto;
+}
+
+.container h2{
+    color: #880000;
+    font-weight: 200;
+}
+
+.flex_container{
+    width:70%;
+    margin: 1% auto;
+}
+
+input[type="text"].search{
+    width:100%;
+    box-sizing: border-box;
+    margin:0 auto;
+    padding:15px 15px;
+    border: 1px solid #eeeeee;
+    border-radius: 5px 5px;
+    font-size: 1.2em;
+    color:#090909;
+    outline:2px solid #dddddd;
+}
+
+input[type="text"]::placeholder{
+    font-style: italic;
+    font-size: 0.7em;
+    opacity: 0.7;
+}
+
+.item_heading{
+    font-size: 1.2em;
+    color:#880000;
+    font-weight: 300;
+}
+
+.item_heading, .results{
+    width:100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 0 0 #a9a9a9,
+                1px 0 0 0 #a9a9a9,
+                0 0 1px 0 #a9a9a9;
+}
+
+.item_heading>*, .results>*{
+    width:7%;
+    padding:10px 10px;
+    flex-grow: 1;
+    box-sizing: border-box;
+    margin-top:2px;
+}
+
+.collection_name {
+    flex-grow: 3;
+}
+
+.description{
+    flex-grow: 7;
+}
+
+.results a{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #880000;
+}
